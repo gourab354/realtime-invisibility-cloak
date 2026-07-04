@@ -1,39 +1,83 @@
 # 🌌 Ghost // Invisibility Cloak System
 
-A high-performance, real-time computer vision application that grants you the power of digital invisibility. Built with **Python**, **OpenCV**, and **MediaPipe**, this system uses advanced AI segmentation and hand gesture tracking to let you vanish from your webcam stream at the pinch of a finger.
+<p align="center">
+  <img src="Demo.gif" alt="Project Demo Loop" width="700px" style="border-radius: 10px; box-shadow: 0px 4px 20px rgba(0,0,0,0.3);"/>
+</p>
 
-![Project Demo](demo.gif)
-
----
-
-## ✨ Features
-
-- **🤖 AI-Powered Silhouette Isolation**: Uses MediaPipe Selfie Segmentation with an enhanced morphology pipeline (dilation and Gaussian blur closing) to guarantee 100% full-coverage masking, eliminating edge bleeding or loose clothing artifacts.
-- **🖐️ Gesture-Driven Activation**: 
-  - Spread both hands apart to summon a dynamic, sci-fi glowing **Portal Box** between your index fingertips.
-  - Pinch your thumb and index finger together on either hand to toggle **Invisibility Mode** instantly.
-- **👁️ Cinematic CyberHUD**: A fully immersive tactical heads-up display complete with corner framing brackets, fingertip targeting reticles, real-time FPS monitoring, compute device indicators, and an interactive opacity progress bar.
-- **🔊 Asynchronous Sci-Fi Sound Effects**: Immersive, multi-threaded audio cues (calibration countdowns, activation sweeps, and camera shutters) powered by `winsound` that run in background threads to completely avoid frame drop or video lag.
-- **📹 Production Utilities**: Built-in features to save high-resolution screenshots or track session states instantly with dedicated hotkeys.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white&style=for-the-badge" alt="Python Version">
+  <img src="https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv&logoColor=white&style=for-the-badge" alt="OpenCV Version">
+  <img src="https://img.shields.io/badge/MediaPipe-AI%20Vision-purple?style=for-the-badge" alt="MediaPipe">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License">
+</p>
 
 ---
 
-## 🛠️ Tech Stack
+## ⚡ Overview
 
-- **Core Language:** Python 3.8+
-- **Computer Vision:** OpenCV (cv2)
-- **Machine Learning Models:** MediaPipe (Selfie Segmentation & Hands Tracking)
-- **Numerical Operations:** NumPy
+**Ghost** is a high-performance, real-time computer vision application that grants you the power of digital invisibility. Built using **Python**, **OpenCV**, and **MediaPipe**, this system leverages advanced AI-driven silhouette isolation and hand gesture tracking to let you seamlessly vanish from your webcam stream at the pinch of a finger.
 
 ---
 
-## 🚀 Installation & Setup
+## ✨ Key Features
 
-1. **Clone or download** this repository to your local machine.
-2. **Connect a webcam** to your computer.
-3. **Run the application** (Dependencies will auto-install on the first launch if missing!):
+* **🤖 AI-Powered Silhouette Isolation** Utilizes MediaPipe Selfie Segmentation augmented by an advanced mathematical morphology pipeline (dilation and Gaussian blur closing). This guarantees 100% full-coverage masking, eliminating edge bleeding, color fringing, or loose clothing artifacts.
+* **🖐️ Gesture-Driven Activation Loop** * **Summon:** Spread both hands apart to generate a dynamic, sci-fi glowing **Portal Box** right between your index fingertips.
+    * **Vanish:** Pinch your thumb and index finger together on either hand to toggle **Invisibility Mode** instantly.
+* **👁️ Cinematic CyberHUD** An immersive tactical heads-up display overlay featuring corner framing brackets, fingertip tracking target reticles, real-time FPS telemetry metrics, compute device indicators, and an interactive opacity progress bar.
+* **🔊 Asynchronous Sci-Fi Audio** Immersive audio cues (calibration countdown ticks, activation sweeps, and camera shutters) powered by `winsound`. Audio execution runs entirely on multi-threaded background loops to prevent video frame drops or streaming latency.
+
+---
+
+## 🎮 How to Control & Play
+
+### 1. Gesture Sequence Workflow
+
+| Step | Gesture Action | UI Visual Feedback |
+| :--- | :--- | :--- |
+| **01** | **Stand completely still** for 3 seconds during initial boot. | A countdown sound registers your environment's clean baseline. |
+| **02** | Raise both hands up and **spread them apart**. | A reactive cyan/yellow **Portal Box** aligns between your index fingers. |
+| **03** | **Pinch** your thumb and index finger together. | The system blends you smoothly out, leaving only the clean room. |
+| **04** | **Pinch your fingers together** once more. | The alpha mask steps down, blending you back into reality. |
+
+### 2. Operational Hotkeys
+
+* `R` — **Recalibrate Background:** Flushes the baseline cache and re-samples an empty room frame.
+* `S` — **Save Screenshot:** Captures the final frame buffer as a high-resolution `.png` file.
+* `Q` / `ESC` — **Safe Quit:** Halts frame capture threads and destroys active window variables gracefully.
+
+---
+
+## 🚀 Installation & Launch
+
+1. Clone or download this project workspace to your local directory.
+2. Plug in your webcam setup.
+3. Fire up your terminal loop (required modules will auto-verify and **auto-install** on initialization):
 
 ```bash
 python main.py
-To specify a custom camera index (e.g., if using an external webcam), pass the index as an argument:Bashpython main.py 1
-🎮 How to Control & Play1. Gesture ReferenceStepActionVisual FeedbackStep 1Stand completely still for 3 seconds during startup.Countdown timer registers your room's background calibration.Step 2Raise both hands and spread them apart.A sleek, reactive yellow/cyan Portal Box aligns between your index fingers.Step 3Pinch your thumb and index finger together.You smoothly vanish into the environment!Step 4Pinch your fingers together once more.The system blends you smoothly back into the frame.2. Keyboard HotkeysR : Recalibrate Background (Clears cache and recaptures the empty room background).S : Save Screenshot (Captures the current output frame as a high-res .png).Q / ESC : Quit the application safely.🗂️ Project Architecturemain.py: The application entry point managing the webcam feed loop, key inputs, and core orchestration.engine.py: The engineering core hosting the SegmentationEngine (with custom mask boosting), HandTracker (pinch-ratio mechanics), BackgroundModel (temporal averaging), and PortalBox renderer.hud.py / CyberHUD: Renders the advanced sci-fi interface, corner markers, recording state overlays, and custom targeting reticles.cloaks.py & background.py: Modular engines handling background allocation policies and pure pixel-blending algorithms.sound.py: Multi-threaded sound card manager ensuring zero-latency audio playback for UI events.
+💡 External Camera Prompt: If using an external rig or secondary capture card, map the camera index integer directly into the console arguments:
+
+Bash
+python main.py 1
+🗂️ Workspace Architecture
+Code snippet
+graph TD
+    A[main.py: App Orchestration] --> B[engine.py: Compute & CV Core]
+    B --> C[hud.py: CyberHUD Overlay]
+    B --> D[sound.py: Async Audio Processing]
+    B --> E[cloaks.py & background.py: Matrix Blenders]
+main.py — Primary application orchestration layer. Handles camera capturing pipes and hardware polling hooks.
+
+engine.py — The analytical core houses tracking architectures, pinch thresholds, and custom matrix morphology routines.
+
+hud.py — Renders target bounding brackets, geometric HUD graphics, and live telemetry indicators.
+
+sound.py — Background sound card wrapper managing zero-latency playback.
+
+cloaks.py & background.py — Pixel blending configurations and space-saving image buffering models.
+
+📝 License & Attribution
+This architecture is open-source software distributed under the terms of the MIT License.
+
+Designed and engineered with 💙 by Gourab
