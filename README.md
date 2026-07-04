@@ -1,84 +1,171 @@
 # 🌌 Ghost // Invisibility Cloak System
 
 <p align="center">
-  <img src="Demo.gif" alt="Project Demo Loop" width="700px" style="border-radius: 10px; box-shadow: 0px 4px 20px rgba(0,0,0,0.3);"/>
+  <img src="Demo.gif" alt="Project Demo Loop" width="700px"/>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white&style=for-the-badge" alt="Python Version">
-  <img src="https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv&logoColor=white&style=for-the-badge" alt="OpenCV Version">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white&style=for-the-badge" alt="Python">
+  <img src="https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv&logoColor=white&style=for-the-badge" alt="OpenCV">
   <img src="https://img.shields.io/badge/MediaPipe-AI%20Vision-purple?style=for-the-badge" alt="MediaPipe">
-  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT">
 </p>
 
 ---
 
-## ⚡ Overview
+# ⚡ Overview
 
-**Ghost** is a high-performance, real-time computer vision application that grants you the power of digital invisibility. Built using **Python**, **OpenCV**, and **MediaPipe**, this system leverages advanced AI-driven silhouette isolation and hand gesture tracking to let you seamlessly vanish from your webcam stream at the pinch of a finger.
-
----
-
-## ✨ Key Features
-
-* **🤖 AI-Powered Silhouette Isolation**: Utilizes MediaPipe Selfie Segmentation augmented by an advanced mathematical morphology pipeline (dilation and Gaussian blur closing). This guarantees 100% full-coverage masking, eliminating edge bleeding, color fringing, or loose clothing artifacts.
-* **🖐️ Gesture-Driven Activation Loop**: 
-    * **Summon**: Spread both hands apart to generate a dynamic, sci-fi glowing **Portal Box** right between your index fingertips.
-    * **Vanish**: Pinch your thumb and index finger together on either hand to toggle **Invisibility Mode** instantly.
-* **👁️ Cinematic CyberHUD**: An immersive tactical heads-up display overlay featuring corner framing brackets, fingertip tracking target reticles, real-time FPS telemetry metrics, compute device indicators, and an interactive opacity progress bar.
-* **🔊 Asynchronous Sci-Fi Audio**: Immersive audio cues (calibration countdown ticks, activation sweeps, and camera shutters) powered by `winsound`. Audio execution runs entirely on multi-threaded background loops to prevent video frame drops or streaming latency.
+**Ghost** is a high-performance, real-time computer vision application that grants you the power of digital invisibility. Built using **Python**, **OpenCV**, and **MediaPipe**, this system leverages AI-driven silhouette isolation and hand gesture tracking to let you seamlessly disappear from your webcam stream with nothing more than a pinch gesture.
 
 ---
 
-## 🎮 How to Control & Play
+# ✨ Key Features
 
-### 1. Gesture Sequence Workflow
+- 🤖 **AI-Powered Silhouette Isolation**
+  - MediaPipe Selfie Segmentation
+  - Morphological refinement
+  - Gaussian blur edge smoothing
+  - Clean full-body masking
 
-| Step | Gesture Action | UI Visual Feedback |
-| :--- | :--- | :--- |
-| **01** | **Stand completely still** for 3 seconds during initial boot. | A countdown sound registers your environment's clean baseline. |
-| **02** | Raise both hands up and **spread them apart**. | A reactive cyan/yellow **Portal Box** aligns between your index fingers. |
-| **03** | **Pinch** your thumb and index finger together. | The system blends you smoothly out, leaving only the clean room. |
-| **04** | **Pinch your fingers together** once more. | The alpha mask steps down, blending you back into reality. |
+- 🖐️ **Gesture-Based Controls**
+  - ✨ Spread both hands to create a glowing Portal Box.
+  - 👌 Pinch thumb + index finger to toggle invisibility.
 
-### 2. Operational Hotkeys
+- 👁️ **CyberHUD Interface**
+  - FPS Counter
+  - Target Reticles
+  - Hand Tracking Indicators
+  - Opacity Progress Bar
+  - Live Status Monitor
 
-* `R` — **Recalibrate Background**: Flushes the baseline cache and re-samples an empty room frame.
-* `S` — **Save Screenshot**: Captures the final frame buffer as a high-resolution `.png` file.
-* `Q` / `ESC` — **Safe Quit**: Halts frame capture threads and destroys active window variables gracefully.
+- 🔊 **Asynchronous Audio Engine**
+  - Countdown
+  - Camera shutter
+  - Activation sounds
+  - Non-blocking background playback
 
 ---
 
-## 🚀 Installation & Launch
+# 🎮 Controls
 
-1. Clone or download this project workspace to your local directory.
-2. Plug in your webcam setup.
-3. Fire up your terminal loop (required modules will auto-verify and **auto-install** on initialization):
+## Gesture Workflow
+
+| Step | Gesture | Action |
+|------|---------|--------|
+| 1 | Stay still for 3 seconds | Background Calibration |
+| 2 | Spread both hands | Portal appears |
+| 3 | Pinch fingers | Become invisible |
+| 4 | Pinch again | Become visible |
+
+---
+
+## Keyboard Shortcuts
+
+| Key | Function |
+|-----|----------|
+| **R** | Recalibrate Background |
+| **S** | Save Screenshot |
+| **Q** | Quit |
+| **ESC** | Quit |
+
+---
+
+# 🚀 Installation & Launch
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/yourusername/Ghost.git
+cd Ghost
+```
+
+### 2️⃣ Run
 
 ```bash
 python main.py
-💡 External Camera Prompt: If using an external rig or secondary capture card, map the camera index integer directly into the console arguments:
+```
 
-Bash
+### External Camera
+
+If you're using an external webcam:
+
+```bash
 python main.py 1
-🗂️ Workspace Architecture
-Code snippet
-graph TD
-    A[main.py: App Orchestration] --> B[engine.py: Compute & CV Core]
-    B --> C[hud.py: CyberHUD Overlay]
-    B --> D[sound.py: Async Audio Processing]
-    B --> E[cloaks.py & background.py: Matrix Blenders]
-main.py — Primary application orchestration layer. Handles camera capturing pipes and hardware polling hooks.
+```
 
-engine.py — The analytical core houses tracking architectures, pinch thresholds, and custom matrix morphology routines.
+---
 
-hud.py — Renders target bounding brackets, geometric HUD graphics, and live telemetry indicators.
+# 📂 Project Structure
 
-sound.py — Background sound card wrapper managing zero-latency playback.
+```text
+Ghost/
+│
+├── main.py              # Main Application
+├── engine.py            # Vision Engine
+├── hud.py               # HUD Renderer
+├── sound.py             # Audio Engine
+├── cloaks.py            # Cloak Effects
+├── background.py        # Background Capture
+│
+├── Demo.gif
+├── LICENSE
+└── README.md
+```
 
-cloaks.py & background.py — Pixel blending configurations and space-saving image buffering models.
+---
 
-📝 License & Attribution
-This architecture is open-source software distributed under the terms of the MIT License.
+# 🧩 Module Overview
 
-Designed and engineered with 💙 by Gourab.
+| Module | Description |
+|---------|-------------|
+| **main.py** | Initializes camera, application loop and orchestrates every subsystem. |
+| **engine.py** | Handles MediaPipe segmentation, hand tracking, pinch detection and invisibility logic. |
+| **hud.py** | Draws CyberHUD overlays, FPS counter, targeting brackets and telemetry. |
+| **sound.py** | Plays activation, countdown and camera sounds asynchronously. |
+| **cloaks.py** | Pixel blending engine responsible for invisibility rendering. |
+| **background.py** | Captures and manages calibrated background frames. |
+
+---
+
+# 🛠️ Technologies Used
+
+- Python
+- OpenCV
+- MediaPipe
+- NumPy
+- Winsound
+- Threading
+
+---
+
+# 📸 Demo
+
+<p align="center">
+<img src="Demo.gif" width="700">
+</p>
+
+---
+
+# 📜 License
+
+Licensed under the **MIT License**.
+
+Feel free to modify, distribute and build upon this project.
+
+---
+
+# 👨‍💻 Author
+
+<p align="center">
+
+### 💙 Designed & Engineered by Gourab
+
+Electronics • Robotics • Computer Vision • AI
+
+</p>
+
+---
+
+<p align="center">
+⭐ If you enjoyed this project, consider giving it a star!
+</p>
