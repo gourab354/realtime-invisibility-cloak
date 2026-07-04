@@ -138,14 +138,6 @@ Ghost/
 
 ---
 
-# 📸 Demo
-
-<p align="center">
-<img src="Demo.gif" width="700">
-</p>
-
----
-
 # 📜 License
 
 Licensed under the **MIT License**.
