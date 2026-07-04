@@ -57,7 +57,8 @@
 
 ```bash
 python main.py
-💡 External Camera Prompt: If using an external rig or secondary capture card, map the camera index integer directly into the console arguments[cite: 6, 7]:Bashpython main.py 1
+💡 External Camera Prompt: If using an external rig or secondary capture card, map the camera index integer directly into the console arguments[cite: 6, 7]:Bashpython main.py 1 
+```
 🗂️ Workspace ArchitectureCode snippetgraph TD
     A[main.py: App Orchestration] --> B[engine.py: Compute & CV Core]
     B --> C[hud.py: CyberHUD Overlay]
