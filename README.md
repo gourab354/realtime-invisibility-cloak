@@ -75,8 +75,8 @@
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/Ghost.git
-cd Ghost
+git clone https://github.com/gourab354/realtime-invisibility-cloak.git
+cd realtime-invisibility-cloak
 ```
 
 ### 2️⃣ Run
