@@ -1,9 +1,3 @@
-যা দেখছেন তা হলো GitHub-এর একটি পরিচিত **Markdown rendering bug**। আগের কোডে `>` (blockquote) চিহ্নের ভেতরে কোড ব্লক (`````) ব্যবহার করার কারণে GitHub-এর পার্সার কনফিউজড হয়ে পুরো নিচের অংশটাকে একটিমাত্র বড় টেক্সট বক্সের ভেতর আটকে ফেলেছে।
-
-এটি ঠিক করার পাশাপাশি আপনার স্ক্রিনশট (`Screenshot 2026-07-04 201943.png`) অনুযায়ী নিচে নাম পরিবর্তন করে **Gourab** করে দেওয়া হয়েছে।
-
-আপনার `Readme.md` ফাইলের সব লেখা ডিলেট করে নিচের সম্পূর্ণ কোডটি **Copy-Paste** করে দিন, একদম নিখুঁত দেখাবে:
-
 ```markdown
 # 🌌 Ghost // Invisibility Cloak System
 
@@ -12,10 +6,10 @@
 </p>
 
 <p align="center">
-  <img src="[https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white&style=for-the-badge](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white&style=for-the-badge)" alt="Python Version">
-  <img src="[https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv&logoColor=white&style=for-the-badge](https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv&logoColor=white&style=for-the-badge)" alt="OpenCV Version">
-  <img src="[https://img.shields.io/badge/MediaPipe-AI%20Vision-purple?style=for-the-badge](https://img.shields.io/badge/MediaPipe-AI%20Vision-purple?style=for-the-badge)" alt="MediaPipe">
-  <img src="[https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)" alt="MIT License">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white&style=for-the-badge" alt="Python Version">
+  <img src="https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv&logoColor=white&style=for-the-badge" alt="OpenCV Version">
+  <img src="https://img.shields.io/badge/MediaPipe-AI%20Vision-purple?style=for-the-badge" alt="MediaPipe">
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License">
 </p>
 
 ---
